@@ -14,5 +14,4 @@ Assume that the messages come randomly to the system, this can be realized if th
 #### Divide up the problem into two sub-problems
 (a)P1:  counter  threads  count  messages  and  add  them  to  the  counter  shared variable, and monitor thread reads it.<br>
 (b)P2: monitor thread places the count in the buffer and collector thread reads it.<br>
-
-
+![](hint.PNG)
