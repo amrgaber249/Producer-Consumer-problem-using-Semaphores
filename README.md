@@ -15,3 +15,32 @@ Assume that the messages come randomly to the system, this can be realized if th
 (a)P1:  counter  threads  count  messages  and  add  them  to  the  counter  shared variable, and monitor thread reads it.<br>
 (b)P2: monitor thread places the count in the buffer and collector thread reads it.<br>
 ![](hint.PNG)
+
+
+### Sample Run:
+Your sample run will show a sequence of the behavior of each thread at the times of their activation (at random intervals), for example:
+<br>
+counter #: 5<br>
+Counter thread 3: received a message<br>
+Counter thread 4: received a message<br>
+Counter thread 4: waiting to write<br>
+Counter thread 1: received a message<br>
+Counter thread 1: waiting to write<br>
+Collector thread: nothing is in the buffer!<br>
+Counter thread 2: received a message<br>
+Counter thread 2: waiting to write<br>
+Counter thread 3: now adding to counter, counter value=1<br>
+Counter thread 0: received a message<br>
+Counter thread 0: waiting to write<br>
+Counter thread 4: now adding to counter, counter value=2<br>
+Counter thread 1: now adding to counter, counter value=3<br>
+Monitor thread: reading a count value of 3<br>
+Monitor thread: writing to buffer at position 0<br>
+Counter thread 2: now adding to counter, counter value=1<br>
+Counter thread 0: now adding to counter, counter value=2<br>
+Monitor thread: waiting to read counter<br>
+Collector thread: reading from buffer at position 0<br>
+Monitor thread: reading a count value of 2<br>
+Monitor thread: writing to buffer at position 0<br>
+Collector thread: reading from buffer at position 0<br>
+<br>
