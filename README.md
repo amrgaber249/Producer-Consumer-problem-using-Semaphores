@@ -20,6 +20,7 @@ Assume that the messages come randomly to the system, this can be realized if th
 ### Sample Run:
 Your sample run will show a sequence of the behavior of each thread at the times of their activation (at random intervals), for example:
 <br>
+<br>
 counter #: 5<br>
 Counter thread 3: received a message<br>
 Counter thread 4: received a message<br>
